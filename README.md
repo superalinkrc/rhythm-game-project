@@ -1,2 +1,2 @@
 # rhythm-game-project
-Rhythm game project for Multimedia class
+Rhythm game. Game where players tap or click in rhythm with music. Players are scored based on their timing accuracy.
