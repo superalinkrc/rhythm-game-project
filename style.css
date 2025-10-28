@@ -1,0 +1,74 @@
+body {
+    font-family: Arial;
+    background: darkgrey;
+    color: whitesmoke;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.score {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: blue;
+}
+
+.game-area {
+    height: 200px;
+    background: black;
+    border: 3px solid blue;
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.line {
+    position: absolute;
+    left: 150px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: red;
+}
+
+
+.keys {
+    display: flex;
+    justify-content: center;
+}
+
+.key {
+    width: 80px;
+    height: 80px;
+    background: black;
+    border: 3px solid whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.key.red {
+    color: red;
+}
+
+.key.blue {
+    color: blue;
+}
+
+.key.active {
+    background: beige;
+}
