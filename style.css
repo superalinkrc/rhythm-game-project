@@ -4,6 +4,10 @@ body {
     color: whitesmoke;
     margin: 0;
     padding: 20px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
@@ -25,12 +29,14 @@ h1 {
 }
 
 .game-area {
+    width: 800px;
     height: 200px;
     background: black;
     border: 3px solid blue;
     position: relative;
     margin-bottom: 30px;
     overflow: hidden;
+    display: flex;
 }
 
 .line {
@@ -46,6 +52,7 @@ h1 {
 .keys {
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
 
 .key {
