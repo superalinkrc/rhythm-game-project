@@ -1,6 +1,6 @@
 body {
     font-family: Arial;
-    background: darkgrey;
+    background: lightsteelblue;
     color: whitesmoke;
     margin: 0;
     padding: 20px;
@@ -11,14 +11,32 @@ body {
 }
 
 .container {
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
+    
 }
 
 h1 {
     text-align: center;
-    color: red;
+    width: fit-content;
+    margin: 0 auto 10px auto;
+    padding: 5px 20px;
+    color: darkred;
     margin-bottom: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    
+}
+
+h2 {
+      text-align: center;
+    width: fit-content;
+    margin: 0 auto 10px auto;
+    padding: 5px 20px;
+    color: darkred;
+    margin-bottom: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
 }
 
 .score {
@@ -26,17 +44,23 @@ h1 {
     font-size: 24px;
     margin-bottom: 20px;
     color: blue;
+    background-color: lightcyan;
+    border-radius: 15px;
 }
 
 .game-area {
-    width: 800px;
-    height: 200px;
-    background: black;
-    border: 3px solid blue;
+    width: 1000px;
+    
+    height: 600px;
+    background: blue;
+    border: 3px solid black;
+    border-radius: 20px;
     position: relative;
-    margin-bottom: 30px;
+    margin: 0 auto;
     overflow: hidden;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .line {
@@ -46,13 +70,42 @@ h1 {
     bottom: 0;
     width: 4px;
     background: red;
+    z-index: 2;
+}
+
+.circle {
+    position: absolute;
+    left: 152px;       
+    top: 50%;          
+    
+    width: 50px;       
+    height: 50px;
+    border: 3px solid gold; 
+    border-radius: 50%;     
+    
+    
+    transform: translate(-50%, -50%); 
+    z-index: 4; 
+
+}
+
+.line2 {
+    position: absolute;
+    left: 150px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: red;
+    z-index: 2;
 }
 
 
-.keys {
+.keys { 
+    position: relative;
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-top: 20px;
 }
 
 .key {
@@ -75,7 +128,80 @@ h1 {
 .key.blue {
     color: blue;
 }
+.key.yellow {
+    color: yellow;
+}
 
 .key.active {
     background: beige;
 }
+
+#backgroundVideo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.8;
+}
+.game-elements {
+    /*position: absolute;
+    top: 70%;
+    left: 13%;*/
+    position: relative;
+    /*--transform: translate(-50%, -50%);*/
+
+   /* width: 1200px;*/
+    width: 800px;
+    height: 200px;
+    z-index: 2;
+}
+
+canvas {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 20px;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 0 auto 10px auto;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.lives{
+    color: green;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    background-color: darkgoldenrod;
+    border-radius: 10px;
+    
+}
+
+#feedbackText {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.perfect {
+    color: gold;
+}
+
+.good { color: lime;}
+.bad {color: red};
+

@@ -4,21 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rhythm Game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
     <div class="container">
-        <h1>Rhythm Game</h1>
-        <div class="score">Score: 0</div>
-        <div class="game-area">
-            <div class="line"></div>
-            <canvas id="gameCanvas" width="800" height="200"></canvas>
+        <h1>RHYTHM GAME™: 2025 Edition</h1>
+        <h2 id="playInstruction">Press SPACE to Play.</h2>
+
+        <div class="status">
+             <div class=" score">Score: 0</div>
+             <div class=" lives">Lives: 0</div>
+             
         </div>
+
+        
+        <div id="feedbackText"></div>
+        
+        <div class="game-area">
+                
+                <video id="backgroundVideo" src="./assets/drms.mp4" loop></video>
+                <div class="game-elements">
+                    <div class="line"></div>
+
+                    
+                    
+                    <canvas id="gameCanvas" width="800" height="200"></canvas>
+                </div>
+                
+            </div>
+
+        
+        
         <div class="keys">
-            <div class="key red">F</div>
-            <div class="key blue">J</div>
+            
+            <div class=" key red" style="margin-top: 10px;">F</div>
+            <div class=" key yellow" style="margin-top: 100px">B</div>
+            <div class=" key blue" style="margin-top: 10px;">J</div>
         </div>
     </div>
+    <audio id="gameSong" src="./assets/song2.mp3" ></audio>
+    <audio id="normalHitSound" src="./assets/click.mp3"></audio>
+    <audio id="specialHitSound" src="./assets/chime.mp3"></audio>
+    <audio id="missHitSound" src="./assets/buzz.mp3"></audio>
     <script src="game.js"></script>
 </body>
 </html>
